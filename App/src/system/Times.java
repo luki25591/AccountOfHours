@@ -1,8 +1,9 @@
 package system;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Times {
+public class Times implements Serializable {
     private int hours;
     private int minutes;
     private LocalDate date;
