@@ -10,9 +10,9 @@ public class Times implements Serializable {
 
 
     public Times(LocalDate createDate, int hours, int minutes){
+        this(hours, minutes);
         this.date = createDate;
-        this.hours = hours;
-        this.minutes = minutes;
+
     }
     public Times(int hours, int minutes){
         this.hours = hours;
