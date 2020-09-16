@@ -19,17 +19,20 @@ public class App {
         LocalDate createDate1 = LocalDate.parse("2019-04-14");
         LocalDate createDate2 = LocalDate.parse("2019-04-18");
         LocalDate createDate3 = LocalDate.parse("2019-04-19");
+        LocalDate createDate4 = LocalDate.parse("2020-09-16");
 
-        Times times = new Times(createDate, 1, 20);
-        Times times1 = new Times(createDate1, 1, 30);
+        Times times = new Times(createDate, 1, 0);
+        Times times1 = new Times(createDate1, 1, 0);
         Times times2 = new Times(createDate2, 1, 0);
         Times times3 = new Times(createDate3, 0, 30);
+        Times times4 = new Times(createDate4, 0, 30);
 
         List<Times> list = new ArrayList<>();
         list.add(times);
         list.add(times1);
         list.add(times2);
         list.add(times3);
+        list.add(times4);
 
         System.out.println("Dodano do listy czas nadliczbowy: ");
         for (Times l : list) {
@@ -49,10 +52,10 @@ public class App {
         int resum = addAllTime.apply(times);
         System.out.println(resum);
 
-        Times times4 = new Times(createDate2, 0, 40);
+        Times timesout = new Times(createDate2, 0, 40);
 
         List<Times> list2 = new ArrayList<>();
-        list2.add(times4);
+        list2.add(timesout);
 
         System.out.println("Odebrany czas nadliczbowy w minutach:");
         for (Times l : list2) {
